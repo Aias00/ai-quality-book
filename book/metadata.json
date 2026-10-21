@@ -6,7 +6,7 @@
   "lang": "zh-CN",
   "repository": "https://github.com/Aias00/ai-quality-book",
   "slug": "ai-quality-book",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "date": "2026-10-21",
   "description": "用带参考答案的小型数据集和可运行质量流水线，连接样本隔离、任务验收、评分校准、逐样本回归、配对统计、预算与发布门槛。",
   "cover_lines": [

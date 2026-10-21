@@ -2,6 +2,30 @@ name: Build, verify and publish book
 on:
   push:
     branches: [main]
+    # README and license files are included in lab.zip. Delivery/release records
+    # are not build inputs and must not replace already verified public assets.
+    paths:
+      - 'book/**'
+      - 'lab/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'web/**'
+      - 'epub/**'
+      - '.github/**'
+      - 'README.md'
+      - 'LICENSE*'
+      - 'requirements*.txt'
+      - 'pyproject.toml'
+      - 'poetry.lock'
+      - 'uv.lock'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'pnpm-lock.yaml'
+      - 'yarn.lock'
+      - '.python-version'
+      - '.node-version'
+      - '.nvmrc'
+      - '.tool-versions'
   workflow_dispatch:
 permissions:
   contents: read
