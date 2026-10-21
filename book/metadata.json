@@ -1,0 +1,20 @@
+{
+  "title": "AI 应用质量交付：从评测集到发布回归",
+  "short_title": "AI 质量交付",
+  "subtitle": "让样本、评分与发布决定可以复核",
+  "author": "Aias00",
+  "lang": "zh-CN",
+  "repository": "https://github.com/Aias00/ai-quality-book",
+  "slug": "ai-quality-book",
+  "version": "1.0.0",
+  "date": "2026-10-21",
+  "description": "用带参考答案的小型数据集和可运行质量流水线，连接样本隔离、任务验收、评分校准、逐样本回归、配对统计、预算与发布门槛。",
+  "cover_lines": [
+    "AI 应用",
+    "质量交付"
+  ],
+  "cover_label": "EVALUATE · COMPARE · RELEASE",
+  "cover_subtitle": "数据集 · 评分器 · 回归 · 发布证据",
+  "include_code": true,
+  "rights": "© 2026 Aias00. 保留所有权利。"
+}

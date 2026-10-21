@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-10-21T08:48:11.732750+00:00",
+  "scope": "local source and final manuscript review; generated formats and reading interactions",
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "result": "passed",
+      "tests": 17
+    },
+    {
+      "command": "python3 -m lab.demo",
+      "result": "passed",
+      "comparisons": 3,
+      "candidate_gate_results": {
+        "prompt_v2": true,
+        "retrieval_v2": false,
+        "model_v2": false
+      }
+    },
+    {
+      "command": "python3 scripts/build.py && python3 scripts/verify.py",
+      "result": "passed",
+      "body_chapters": 16,
+      "appendices": 4,
+      "total_pieces": 21
+    },
+    {
+      "command": "EPUBCheck 5.4.0",
+      "result": "passed",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "command": "node scripts/browser-check.cjs",
+      "result": "passed",
+      "widths": [
+        320,
+        390
+      ],
+      "all_pieces": 21,
+      "includes": [
+        "light default under dark OS",
+        "shared theme and tab sync",
+        "search",
+        "font persistence",
+        "native mobile contents",
+        "no-JS body and pagination",
+        "denied storage",
+        "download links",
+        "no JS errors"
+      ]
+    },
+    {
+      "command": "execute chapter14 review workflow",
+      "result": "passed",
+      "fingerprinted_review_preserves_artifact_results": true
+    }
+  ],
+  "not_performed": [
+    "real model calls or model training",
+    "real human agreement study",
+    "business-population inference",
+    "OS sandbox security audit",
+    "production deployment"
+  ]
+}

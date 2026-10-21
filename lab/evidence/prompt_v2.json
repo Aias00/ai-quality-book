@@ -1,0 +1,798 @@
+{
+  "run_kind": "controlled_deterministic_fixture_no_real_model",
+  "created_at": "2026-10-21T08:26:47.943428+00:00",
+  "dataset": {
+    "version": "synthetic-quality-v1",
+    "synthetic": true,
+    "purpose": "Test quality pipeline behavior, not model intelligence or vendor ranking",
+    "splits": {
+      "train": {
+        "samples": 6,
+        "groups": 3
+      },
+      "dev": {
+        "samples": 8,
+        "groups": 4
+      },
+      "acceptance": {
+        "samples": 12,
+        "groups": 6
+      }
+    },
+    "sha256": {
+      "samples.json": "684c829ea8ed4a07c5f47caa60df2a5548b6c7942ec364a30b18257028907727",
+      "answers.json": "970d44538c5649961c20dcd0e536100020e247ee91d078c68a22b53245141d59"
+    }
+  },
+  "split": "acceptance",
+  "baseline_id": "baseline",
+  "candidate_id": "prompt_v2",
+  "changes": "request_normalizer",
+  "provenance": {
+    "python": "3.14.3",
+    "candidate_sha256": "43a1b0a1ec7879e87807cfa9a89c1ad67df8f48675337576e62964d2af484169",
+    "pipeline_sha256": "1c07424fc6740285f52d3f4d23267285a7f7fbd5117f0c8e1a74f0d28f614278",
+    "answer_file_passed_to_candidate": false,
+    "isolation": "cooperative subprocess, not an OS sandbox"
+  },
+  "budget": {
+    "limit_fixture_units": 2000000,
+    "spent_fixture_units": 10542,
+    "unknown_reservations": 0,
+    "unit": "public task JSON bytes plus candidate response JSON bytes; not model tokens or money"
+  },
+  "rows": [
+    {
+      "id": "acceptance-project-0-file",
+      "group": "acceptance-project-0",
+      "kind": "file",
+      "baseline": {
+        "task_pass": false,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_mismatch",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "e736f46655d8edc6ecd742c326b1703be20afd3c3bd6601d1e45eddf6e885aad",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 227,
+        "output_bytes": 42,
+        "fixture_units": 269,
+        "usage_state": "known",
+        "wall_ms": 42.69,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_matches",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "8e321d493d67b90c018d4aa852fa20a1b8028ad944634ebe1cbcffbb582f1e5d",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 227,
+        "output_bytes": 42,
+        "fixture_units": 269,
+        "usage_state": "known",
+        "wall_ms": 46.852,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-0-answer",
+      "group": "acceptance-project-0",
+      "kind": "answer",
+      "baseline": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 60 days.",
+          "days": 60,
+          "citations": [
+            "acceptance-project-0-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 46.023,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 60 days.",
+          "days": 60,
+          "citations": [
+            "acceptance-project-0-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 47.198,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-1-file",
+      "group": "acceptance-project-1",
+      "kind": "file",
+      "baseline": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_matches",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "bc560491a8815c289e6529249870a0aa4969f7e4f65dbd1d1e7d89ac5c638394",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 214,
+        "output_bytes": 42,
+        "fixture_units": 256,
+        "usage_state": "known",
+        "wall_ms": 45.559,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_matches",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "bc560491a8815c289e6529249870a0aa4969f7e4f65dbd1d1e7d89ac5c638394",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 214,
+        "output_bytes": 42,
+        "fixture_units": 256,
+        "usage_state": "known",
+        "wall_ms": 46.753,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-1-answer",
+      "group": "acceptance-project-1",
+      "kind": "answer",
+      "baseline": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 61 days.",
+          "days": 61,
+          "citations": [
+            "acceptance-project-1-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 46.666,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 61 days.",
+          "days": 61,
+          "citations": [
+            "acceptance-project-1-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 46.321,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-2-file",
+      "group": "acceptance-project-2",
+      "kind": "file",
+      "baseline": {
+        "task_pass": false,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_mismatch",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "8464d1799690fcd38320c01ea20b4cac4f171fe286c68627568ead92d119754b",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 227,
+        "output_bytes": 42,
+        "fixture_units": 269,
+        "usage_state": "known",
+        "wall_ms": 44.094,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_matches",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "4147488415104aad6ae07aca42f2ddf87bb1e6ca7d1e7020bb780417f03fee1e",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 227,
+        "output_bytes": 42,
+        "fixture_units": 269,
+        "usage_state": "known",
+        "wall_ms": 43.641,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-2-answer",
+      "group": "acceptance-project-2",
+      "kind": "answer",
+      "baseline": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 62 days.",
+          "days": 62,
+          "citations": [
+            "acceptance-project-2-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 41.049,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 62 days.",
+          "days": 62,
+          "citations": [
+            "acceptance-project-2-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 40.484,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-3-file",
+      "group": "acceptance-project-3",
+      "kind": "file",
+      "baseline": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_matches",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "e4bedec480f05dd6b6112854c6d03ba8fbf14c98570f22dfa24c1914a42839d7",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 214,
+        "output_bytes": 42,
+        "fixture_units": 256,
+        "usage_state": "known",
+        "wall_ms": 42.316,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_matches",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "e4bedec480f05dd6b6112854c6d03ba8fbf14c98570f22dfa24c1914a42839d7",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 214,
+        "output_bytes": 42,
+        "fixture_units": 256,
+        "usage_state": "known",
+        "wall_ms": 41.407,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-3-answer",
+      "group": "acceptance-project-3",
+      "kind": "answer",
+      "baseline": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 63 days.",
+          "days": 63,
+          "citations": [
+            "acceptance-project-3-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 38.837,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 63 days.",
+          "days": 63,
+          "citations": [
+            "acceptance-project-3-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 47.979,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-4-file",
+      "group": "acceptance-project-4",
+      "kind": "file",
+      "baseline": {
+        "task_pass": false,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_mismatch",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "18e841eee4e9c6e815ff2700d3dd89703d7c73fbaf0944925f4ac11eea820b4a",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 227,
+        "output_bytes": 42,
+        "fixture_units": 269,
+        "usage_state": "known",
+        "wall_ms": 36.249,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_matches",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "a084cced31821aadbd3a94c18d80f20a70631d259b923e834c2734863e1b5c00",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 227,
+        "output_bytes": 42,
+        "fixture_units": 269,
+        "usage_state": "known",
+        "wall_ms": 47.551,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-4-answer",
+      "group": "acceptance-project-4",
+      "kind": "answer",
+      "baseline": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 64 days.",
+          "days": 64,
+          "citations": [
+            "acceptance-project-4-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 43.957,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 64 days.",
+          "days": 64,
+          "citations": [
+            "acceptance-project-4-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 47.863,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-5-file",
+      "group": "acceptance-project-5",
+      "kind": "file",
+      "baseline": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_matches",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "668cf02a2eeb5172bbd88dc33f7da86b64e42a2c62eca6bd76787d6eac105db2",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 214,
+        "output_bytes": 42,
+        "fixture_units": 256,
+        "usage_state": "known",
+        "wall_ms": 41.148,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "artifact_matches",
+        "status": "scored",
+        "response": {
+          "message": "done",
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": "668cf02a2eeb5172bbd88dc33f7da86b64e42a2c62eca6bd76787d6eac105db2",
+          "policy.lock": "08e3dfc089e66c44ae8abd3476b0f810f11f4cfc2ab925f1607c7df21345d639"
+        },
+        "input_bytes": 214,
+        "output_bytes": 42,
+        "fixture_units": 256,
+        "usage_state": "known",
+        "wall_ms": 43.684,
+        "candidate_visible_files": [
+          "candidate.py",
+          "policy.lock",
+          "service.cfg",
+          "task.json"
+        ]
+      }
+    },
+    {
+      "id": "acceptance-project-5-answer",
+      "group": "acceptance-project-5",
+      "kind": "answer",
+      "baseline": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 65 days.",
+          "days": 65,
+          "citations": [
+            "acceptance-project-5-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 38.168,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      },
+      "candidate": {
+        "task_pass": true,
+        "quality_pass": true,
+        "safety_pass": true,
+        "review_pending": false,
+        "reason": "supported_fact",
+        "status": "scored",
+        "response": {
+          "message": "The refund window is 65 days.",
+          "days": 65,
+          "citations": [
+            "acceptance-project-5-current"
+          ],
+          "needs_review": false
+        },
+        "artifact_sha256": {
+          "service.cfg": null,
+          "policy.lock": null
+        },
+        "input_bytes": 490,
+        "output_bytes": 126,
+        "fixture_units": 616,
+        "usage_state": "known",
+        "wall_ms": 48.072,
+        "candidate_visible_files": [
+          "candidate.py",
+          "task.json"
+        ]
+      }
+    }
+  ],
+  "statistics": {
+    "estimand": "equal_weight_mean_of_project_task_success_differences",
+    "paired_groups": 6,
+    "cases": 12,
+    "difference": 0.25,
+    "percentile_interval_95": [
+      0.08333333333333333,
+      0.4166666666666667
+    ],
+    "seed": 17,
+    "resamples": 2000,
+    "warning": "Synthetic small fixture: method demonstration, not population evidence or a model ranking"
+  },
+  "gate": {
+    "passed": true,
+    "reasons": [],
+    "policy": "fixture-gate-v1",
+    "noninferiority_margin": -0.05
+  },
+  "failures": []
+}

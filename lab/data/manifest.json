@@ -1,0 +1,23 @@
+{
+  "version": "synthetic-quality-v1",
+  "synthetic": true,
+  "purpose": "Test quality pipeline behavior, not model intelligence or vendor ranking",
+  "splits": {
+    "train": {
+      "samples": 6,
+      "groups": 3
+    },
+    "dev": {
+      "samples": 8,
+      "groups": 4
+    },
+    "acceptance": {
+      "samples": 12,
+      "groups": 6
+    }
+  },
+  "sha256": {
+    "samples.json": "684c829ea8ed4a07c5f47caa60df2a5548b6c7942ec364a30b18257028907727",
+    "answers.json": "970d44538c5649961c20dcd0e536100020e247ee91d078c68a22b53245141d59"
+  }
+}
