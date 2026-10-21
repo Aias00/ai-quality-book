@@ -1,14 +1,13 @@
 # 交付记录：AI 应用质量交付
 
-已完成《AI 应用质量交付：从评测集到发布回归》v1.0.0。
+已完成《AI 应用质量交付：从评测集到发布回归》v1.0.1。
 
 - 公共仓库：https://github.com/Aias00/ai-quality-book
 - 在线阅读：https://aias00.github.io/ai-quality-book/
 - EPUB：https://aias00.github.io/ai-quality-book/downloads/ai-quality-book.epub
-- Release：https://github.com/Aias00/ai-quality-book/releases/tag/v1.0.0
-- Release EPUB：https://github.com/Aias00/ai-quality-book/releases/download/v1.0.0/ai-quality-book.epub
-- 本地CI同版EPUB：`/tmp/ai-quality-book-ci-downloads/ai-quality-book.epub`
-- 本地构建EPUB：`site/downloads/ai-quality-book.epub`
+- Release：https://github.com/Aias00/ai-quality-book/releases/tag/v1.0.1
+- Release EPUB：https://github.com/Aias00/ai-quality-book/releases/download/v1.0.1/ai-quality-book.epub
+- 本地CI同版EPUB：`/tmp/ai-quality-book-v1.0.1-ci/ai-quality-book.epub`
 
 ## 书目数据
 
@@ -18,9 +17,9 @@
 
 ## 实际证据
 
-源码与Release验证提交：`6e68c1f1e423e5ed532342f0ead1a3eb7fab2dee`。
+源码与Release验证提交：`34e45ad2cdb5b87389adc43c77572c3cb12427d1`。
 
-云端完整构建、实验、EPUBCheck、浏览器与Pages部署成功：https://github.com/Aias00/ai-quality-book/actions/runs/39572239103 。本交付记录是之后追加的文档，不改变正文或实验。
+云端完整构建、实验、EPUBCheck、浏览器与Pages部署成功：https://github.com/Aias00/ai-quality-book/actions/runs/39578206011 。本交付记录是之后追加的文档，不改变正文或实验，也不触发产品重建。
 
 - 17项测试通过，26个合成样本：train6/dev8/acceptance12，按项目隔离。
 - 三条实际受控比较：prompt_v2通过；retrieval_v2、model_v2被门槛拒绝；6例评分反例真正执行两种评分器。
@@ -30,7 +29,13 @@
 - 线上CSS/JS与源码字节一致；线上EPUB与CI产物逐字节一致、ZIP完整且mimetype正确。
 - 书中第14章模拟裁决命令已实际执行；报告指纹错误会拒绝，表达裁决不修改产物与安全验收。
 
-线上/CI/Release EPUB SHA-256：`5270dc5ba5d31459fcfea0d6788106fe0681861c82c24fede959c41f362fd9d1`，127,212字节。Release附件取自成功CI产物。
+线上/CI/Release EPUB SHA-256：`f144ae283740c22d9a21c01a39c25a90ed9e19d6220cf3d4594a0a10c06d3bbe`，127,213字节。Release附件取自成功CI产物，另从公开Release和Pages各自完整下载EPUB，使用`cmp`核对三者逐字节一致，ZIP完整、mimetype为首个未压缩文件且内容正确。公网阅读器再次完整验收通过，21篇在320/390px无页面溢出。线上`build-info.json`的版本、大小和哈希均与实际下载一致。
+
+## 发布流程修复与历史
+
+v1.0.1只调整版本标识和出版触发条件，正文与实验未改。工作流按路径监听`book/`、`lab/`、`tests/`、`scripts/`、`web/`、`epub/`、`.github/`，以及打包使用的`README.md`、许可证和构建依赖文件。`DELIVERY.md`与`RELEASE_NOTES.md`不属于构建输入，单独更新这些记录不会替换已核验的线上产物；手动触发完整构建仍保留。
+
+首版v1.0.0源码提交为`6e68c1f1e423e5ed532342f0ead1a3eb7fab2dee`，成功CI为[39572239103](https://github.com/Aias00/ai-quality-book/actions/runs/39572239103)，旧Release与附件保留在[v1.0.0](https://github.com/Aias00/ai-quality-book/releases/tag/v1.0.0)。其EPUB哈希为`5270dc5ba5d31459fcfea0d6788106fe0681861c82c24fede959c41f362fd9d1`。追加文档提交`8f1760fbc00f3690962e601eaba0e72952074eb0`曾触发另一次构建[39573155023](https://github.com/Aias00/ai-quality-book/actions/runs/39573155023)，EPUB时间戳导致当时Pages文件与首版Release字节不同。v1.0.1使用新版本和新成功CI修复发布一致性，不覆盖首版附件或改写历史。
 
 ## 范围限制
 
